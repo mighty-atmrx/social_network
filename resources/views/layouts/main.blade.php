@@ -28,7 +28,7 @@
                         <a class="nav-link fs-6 mt-1" href="#">Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-6 mt-1" href="">Admin</a>
+                        <a class="nav-link fs-6 mt-1" href="{{ route('admin.post.index') }}">Admin</a>
                     </li>
                 </ul>
             </div>
