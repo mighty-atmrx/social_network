@@ -32,8 +32,6 @@
                             <a class="nav-link fs-6 mt-1" href="{{ auth()->user()->role }}">Admin</a>
                         </li>
                     @endif
-
-
                 </ul>
             </div>
         </div>

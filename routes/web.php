@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Auth::routes();
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home', IndexController::class)->name('post.index');
+Route::get('/', IndexController::class)->name('post.index');
 Route::get('/create', CreateController::class)->name('post.create');
-Route::post('/create', StoreController::class)->name('post.store');
+Route::post('/', StoreController::class)->name('post.store');
 Route::get('/show/{post}', ShowController::class)->name('post.show');
 Route::get('/{post}/edit', EditController::class)->name('post.edit');
 Route::patch('/{post}', UpdateController::class)->name('post.update');

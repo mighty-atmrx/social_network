@@ -29,7 +29,7 @@
             </select>
             <p class="mt-3">
                 <button class="btn btn-dark ">
-                    <a class="text-light link-dark link-underline-opacity-0" href="{{ route('posts') }}">Back</a>
+                    <a class="text-light link-dark link-underline-opacity-0" href="{{ route('post.index') }}">Back</a>
                 </button>
                 <button type="submit" class="btn btn-dark ms-3">Update</button>
             </p>

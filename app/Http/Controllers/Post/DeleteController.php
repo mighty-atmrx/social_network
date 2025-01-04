@@ -9,6 +9,6 @@ class DeleteController extends BaseController
 {
     public function __invoke(Post $post){
         $post->delete();
-        return redirect()->route('posts');
+        return redirect()->route('post.index');
     }
 }
