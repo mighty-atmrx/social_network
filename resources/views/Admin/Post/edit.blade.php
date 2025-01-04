@@ -1,8 +1,8 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 @section('content')
 
     <div>
-        <form action="{{ route('post.update', $post->id) }}" method="post">
+        <form action="{{ route('admin.post.update', $post->id) }}" method="post">
             @csrf
             @method('patch')
             <div class="mb-3">
@@ -29,7 +29,7 @@
             </select>
             <p class="mt-3">
                 <button class="btn btn-dark ">
-                    <a class="text-light link-dark link-underline-opacity-0" href="{{ route('posts') }}">Back</a>
+                    <a class="text-light link-dark link-underline-opacity-0" href="{{ route('admin.post.index') }}">Back</a>
                 </button>
                 <button type="submit" class="btn btn-dark ms-3">Update</button>
             </p>

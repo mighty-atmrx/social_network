@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active fs-5" aria-current="page" href="{{ route('posts') }}">Main</a>
+                        <a class="nav-link active fs-5" aria-current="page" href="{{ route('post.index') }}">Main</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-6 mt-1" href="#">My profile</a>
@@ -27,9 +27,13 @@
                     <li class="nav-item">
                         <a class="nav-link fs-6 mt-1" href="#">Messages</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-6 mt-1" href="{{ route('admin.post.index') }}">Admin</a>
-                    </li>
+                    @if(auth()->user()->role === 'admin')
+                        <li class="nav-item">
+                            <a class="nav-link fs-6 mt-1" href="{{ auth()->user()->role }}">Admin</a>
+                        </li>
+                    @endif
+
+
                 </ul>
             </div>
         </div>

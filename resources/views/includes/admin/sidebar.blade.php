@@ -7,7 +7,7 @@
                 <i class="nav-icon fas fa-align-justify"></i>
                 <p>
                     Posts
-                    <span class="badge badge-info right">{{ $posts->total() }}</span>
+                    <span class="badge badge-info right">{{ $posts_qty->count() }}</span>
                 </p>
             </a>
         </li>

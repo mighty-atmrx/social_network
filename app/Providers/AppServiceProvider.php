@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Post;
+use App\Models\User;
+use App\Policies\UserPolicy;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,4 +26,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::defaultView('vendor.pagination.bootstrap-4');
     }
+
 }
