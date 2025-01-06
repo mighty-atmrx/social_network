@@ -19,7 +19,7 @@ class IndexController extends BaseController
 //        $perPage = $data['perPage'] ?? 10;
 
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
-        $posts = Post::filter($filter)->latest()->paginate(10);
+        $posts = Post::filter($filter)->paginate(10);
 
 //        $posts = Post::filter($filter)->paginate($perPage, ['*'], 'page', $page);
 
