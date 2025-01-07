@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\Post\IndexController;
+use App\Http\Controllers\API\Post\ShowController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,4 +15,9 @@ Route::prefix('auth')->middleware('api')->group(function () {
     Route::post('me', [AuthController::class, 'me']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
+});
+
+Route::namespace('App\Http\Controllers\API\Post')->middleware('jwt.auth')->group(function(){
+    Route::get('/posts', IndexController::class);
+    Route::get('/posts/{post}', ShowController::class);
 });

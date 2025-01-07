@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Post;
+namespace App\Http\Controllers\API\Post;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Post\BaseController;
 use App\Http\Filters\PostFilter;
 use App\Http\Requests\FilterRequest;
 use App\Http\Resources\Post\PostResource;
 use App\Models\Post;
-use App\Models\Tag;
 
 class IndexController extends BaseController
 {
@@ -23,9 +22,9 @@ class IndexController extends BaseController
 
 //        $posts = Post::filter($filter)->paginate($perPage, ['*'], 'page', $page);
 
-//        return PostResource::collection($posts);
+        return PostResource::collection($posts);
 
-        return view('post.index', compact('posts'));
+//        return view('post.index', compact('posts'));
 
     }
 }
