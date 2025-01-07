@@ -26,6 +26,7 @@ class StoreRequest extends FormRequest
             'description' => 'required | string',
             'image' => 'string',
             'tags' => '',
+            'tags.*.title' => '',
         ];
     }
 }
